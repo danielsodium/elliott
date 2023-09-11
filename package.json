@@ -1,0 +1,20 @@
+{
+  "name": "crubot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run" : "bun index.js",
+    "deploy" : "bun deploy-commands.js"
+  },
+  "commands": {
+    "run": "node index.js",
+    "deploy" : "node deploy-commands.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0"
+  }
+}
