@@ -157,6 +157,9 @@ module.exports = {
 
 		const menu = await getData(interaction.options.getString("hall"), interaction.options.getString("meal"));
 		var inline = [];
+		if (menu==undefined) {
+			return interaction.reply("Can't find that meal for that dining hall...");
+		}
 		for (const [key, value] of Object.entries(menu)) {
 			if (key == "MISCELLANEOUS" || key == "SALAD") continue;
 			listed = "";
