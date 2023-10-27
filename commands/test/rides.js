@@ -66,6 +66,22 @@ module.exports = {
 			});
 			terra.react('1149705966493904906');
 
+			let praiseEmbed = { 
+				color: 0xcccccc,
+				title: `House of Praise Rides - ${nextDay(7).toLocaleDateString()}`, 
+				description: 'React with the emoji if you woud like a ride this Sunday to House Of Praise Church. DM <@819278303278006302> for pickup time and location.',
+				thumbnail: {
+					url: 'https://cdn.discordapp.com/attachments/860634794589028384/1158490589730451528/324847723_5526450310799179_6865450617495667428_n.png?ex=651c6ff0&is=651b1e70&hm=62734f2393df41c356b68069ab5bcb2dee21bc763006c1f333c3e8d55beca8cc&'
+				},
+				timestamp: nextDay(7).toISOString(),
+				footer: {
+					text: 'Sunday',
+				},
+			};
+			const praise = await terra.reply({
+				embeds: [praiseEmbed],
+				fetchReply:true
+			})
 		}	
 		else {
 			interaction.reply("The ability to speak does not make you intelligent.")	

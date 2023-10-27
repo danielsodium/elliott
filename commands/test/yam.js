@@ -17,7 +17,7 @@ module.exports = {
 			let graceEmbed =  {
 				color: 0xff4400,
 				title: `YAM @ Grace Fellowship Rides - ${nextDay(1).toLocaleDateString()}`, 
-				description: 'React with the emoji if you would like a ride to the young adult ministry (YAM) at Grace Fellowship this Monday. DM <@393100219102789632> if you would like to be picked up from somewhere other than the union.',
+				description: 'React with the emoji if you would like a ride to the young adult ministry (YAM) at Grace Fellowship this Monday at 6:45 at the Union Horseshoe. DM <@819278303278006302> if you would like to be picked up from somewhere other than the union.',
 				thumbnail: {
 					url: 'https://cdn.discordapp.com/attachments/860634794589028384/1152259497524482198/yam.png'
 				},
