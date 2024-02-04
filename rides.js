@@ -1,22 +1,6 @@
 
-import { Client, Collection, Events, GatewayIntentBits, ActivityType } from 'discord.js';
+const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
 
-export const handler = async(event) => {
-    const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-
-    client.commands = new Collection();
-    client.once(Events.ClientReady, () => {
-        console.log('Outputting Church Rides!');
-        client.user.setActivity('the holy spirit', { type: ActivityType.Listening });
-        const channel = client.channels.cache.get('1165459970947567647');
-        sendRides(channel);
-
-    });
-
-    client.login("MTE0MjUzMzAxMjM1ODE4NTAxMA.GdxHIj.GO6RLaVVkMZ_NAisVoe7Uc34KMcpHzSbO2hKeo");
-
-
-}
 // Fresh from the overflow
 function nextDay(x){
     var now = new Date();    
@@ -34,14 +18,14 @@ async function sendRides(channel) {
         },
         fields: [
             {
-                name: '9️⃣ : 9 AM',
+                name: '9️⃣: 9 AM',
                 value: ''
             },
             {
                 name: '⏸️ : 11 AM',
                 value: ''
             }
-        ],
+       ],
         timestamp: nextDay(7).toISOString(),
         footer: {
             text: 'Sunday',
@@ -54,6 +38,7 @@ async function sendRides(channel) {
     });
     grace.react('9️⃣');
     grace.react('⏸️');			
+    /*
     let terraEmbed =  {
         color: 0x414047,
         title: `Terra Nova Rides - ${nextDay(7).toLocaleDateString()}`, 
@@ -91,5 +76,20 @@ async function sendRides(channel) {
         fetchReply:true
     })
     praise.react('1163520284784066820')
+    */
 }
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+    client.commands = new Collection();
+    client.once(Events.ClientReady, () => {
+        console.log('Outputting Church Rides!');
+        client.user.setActivity('the holy spirit', { type: ActivityType.Listening });
+        const channel = client.channels.cache.get('1149706117451100201');
+        sendRides(channel);
+
+    });
+
+    client.login("MTE0MjUzMzAxMjM1ODE4NTAxMA.GrYS3S.ItnqKg0uYTC2zi6fp3pv05t-jWgtdIOhQsbI9k")
+
 
